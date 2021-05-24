@@ -1,18 +1,18 @@
 ﻿using System;
-
+using Entities;
 namespace EXERCISE_01___GETHASHCODE_EQUALS {
     //-----> START
     ///////////////////////////////////////////////////////////////////////////////////////////
     class Program {
         static void Main(string[] args) {
 
-            string a = "Maria";
-            string b = "Alex";
-            string c = "Alex";
+            Client a = new Client { Name = "Maria", Email = "maria@gmail.com" };
+            Client b = new Client { Name = "Alex", Email = "alex@gmail.com" };
 
+            Console.WriteLine(a.Equals(b));
+            Console.WriteLine(a == b);
             Console.WriteLine(a.GetHashCode());
             Console.WriteLine(b.GetHashCode());
-
         }
     }
     ////////////////////////////////////////////////////////////////////////////////////////////
